@@ -1,3 +1,5 @@
+const { UP, DOWN, LEFT, RIGHT, SAY } = require('./constants');
+
 // Stores the active TCP connection object
 
 let connection;
@@ -8,19 +10,20 @@ const handleUserInput = function (key) {
     process.exit();  
   }
   if (key === 'w') {
-    connection.write("Move: up");
+    connection.write(UP);
   }
   if (key === 'a') {
-    connection.write("Move: left");
+    connection.write(LEFT);
   }
   if (key === 's') {
-    connection.write("Move: down");
+    connection.write(DOWN);
   }
   if (key === 'd') {
-    connection.write("Move: right");
+    connection.write(RIGHT);
   }
+  // Display custom message to other players
   if (key === 'q') {
-    connection.write(`Say: Hi guys`)
+    connection.write(SAY);
   }
 }
 
