@@ -6,7 +6,6 @@ const net = require('net');
  */
 const connect = function() {
 
-  console.log('Connecting ...');
   
   const conn = net.createConnection({ 
     host: 'localhost',
